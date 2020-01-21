@@ -1,0 +1,15 @@
+prefix=C:/Program Files (x86)/FreeRDP
+exec_prefix=C:/Program Files (x86)/FreeRDP
+libdir=C:/Program Files (x86)/FreeRDP/lib
+includedir=${prefix}/include/freerdp2/
+libs=-lfreerdp2
+
+Name: FreeRDP
+Description: FreeRDP: A Remote Desktop Protocol Implementation
+URL: http://www.freerdp.com/
+Version: 2.0.0
+Requires: 
+Requires.private: winpr2 libssl
+Libs: -L${libdir} ${libs}
+Libs.private: -ldl -lpthread
+Cflags: -I${includedir}
